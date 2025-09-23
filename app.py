@@ -676,7 +676,7 @@ if 'current_data' in st.session_state:
                 display_df.index = display_df.index.strftime('%Y-%m-%d %H:%M %Z')
                 display_df = display_df.round(1)
                 
-                st.dataframe(display_df, use_container_width=True)
+                st.dataframe(display_df, width='stretch')
                 
                 # Download option
                 csv = display_df.to_csv()
