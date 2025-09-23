@@ -31,6 +31,8 @@ The **Air Quality Index (AQI) Forecasting Dashboard** is a comprehensive web app
 - **Interactive Visualizations**: Clean, professional charts and data displays
 - **Health Profile Integration**: Customized advice for specific health conditions
 
+### 🔗 Link: https://aqihealthadvisory.streamlit.app/
+
 ---
 
 ## ✨ Features
