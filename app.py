@@ -19,12 +19,22 @@ from logic.predict import make_predictions
 
 load_dotenv()
 
+def get_api_key(key_name):
+    """Get API key from Streamlit secrets or environment variables"""
+    try:
+        # Streamlit secrets (for Streamlit Cloud)
+        return st.secrets[key_name]
+    except:
+        # Fall back
+        return os.getenv(key_name)
+
 # Initialize Gemini client
 @st.cache_resource
 def init_gemini_client():
     """Initialize Gemini client (cached to avoid recreating)"""
     try:
-        api_key = os.getenv("GEMINI_API_KEY")
+        # api_key = os.getenv("GEMINI_API_KEY")
+        api_key = get_api_key("GEMINI_API_KEY")
         if not api_key:
             return None
         return genai.Client(api_key=api_key)

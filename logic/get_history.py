@@ -2,9 +2,20 @@ import requests
 import os
 import json
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
-API_KEY = os.getenv("MAPS_KEY")
+def get_api_key(key_name):
+    """Get API key from Streamlit secrets or environment variables"""
+    try:
+        # Streamlit secrets (for Streamlit Cloud)
+        return st.secrets[key_name]
+    except:
+        # Fall back
+        return os.getenv(key_name)
+    
+# API_KEY = os.getenv("MAPS_KEY")
+API_KEY = get_api_key("MAPS_KEY")
 
 def get_air_quality_history(latitude: float, longitude: float, days_back: int = 30) -> dict | None:
     history_url = f"https://airquality.googleapis.com/v1/history:lookup?key={API_KEY}"

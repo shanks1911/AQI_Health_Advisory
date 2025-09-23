@@ -1,9 +1,21 @@
 import requests # type: ignore
 import os
 from dotenv import load_dotenv # type: ignore
+import streamlit as st
 
 load_dotenv()
-API_KEY = os.getenv("MAPS_KEY")
+
+def get_api_key(key_name):
+    """Get API key from Streamlit secrets or environment variables"""
+    try:
+        # Streamlit secrets (for Streamlit Cloud)
+        return st.secrets[key_name]
+    except:
+        # Fall back
+        return os.getenv(key_name)
+    
+# API_KEY = os.getenv("MAPS_KEY")
+API_KEY = get_api_key("MAPS_KEY")
 
 if not API_KEY:
     raise ValueError("API key not found. Make sure you have a .env file with MAPS_KEY set.")

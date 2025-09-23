@@ -12,7 +12,6 @@
 [🚀 Getting Started](#-getting-started) •
 [✨ Features](#-features) •
 [🛠️ Installation](#️-installation) •
-[📊 Demo](#-demo) •
 [🤖 AI Chat](#-ai-health-advisor)
 
 </div>
@@ -241,13 +240,6 @@ Models are automatically trained and saved as `aqi_model_robust.pkl`. The system
 - **scikit-learn**: Machine learning toolkit
 - **Plotly**: Interactive visualizations
 - **Pandas**: Data manipulation and analysis
-
----
-
-### Stay Updated:
-- ⭐ **Star this repository** to get updates
-- 👀 **Watch** for new releases and features
-- 🔔 **Follow** for more projects
 
 ---
 
