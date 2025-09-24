@@ -188,6 +188,7 @@ INSTRUCTIONS:
 5. Always recommend consulting healthcare providers for serious concerns
 6. Use clear, non-technical language while being scientifically accurate
 7. Structure responses with: Current Situation, Health Impact, Recommendations, When to Seek Help
+8. REMEMBER: DO NOT ANSWER ANY QUERY THAT IS OUT OF THIS DOMAIN OF AQI AAND ITS RELATED HEALTH ADVICE. IN SUCH CASE SAY THAT THE QUERY IS OUT OF THIS DOMAIN.
 
 HEALTH CONDITION KNOWLEDGE:
 - Asthma: Air pollution triggers attacks, especially PM2.5 and ozone
@@ -200,7 +201,11 @@ HEALTH CONDITION KNOWLEDGE:
 
 Remember: This is advisory information, not a substitute for professional medical advice.
 
-Please acknowledge you understand this context and are ready to provide health advice for this user in {city}."""
+Please acknowledge you understand this context and are ready to provide health advice for this user in {city}.
+
+REMEMBER: DO NOT ANSWER ANY QUERY THAT IS OUT OF THIS DOMAIN OF AQI AAND ITS RELATED HEALTH ADVICE. IN SUCH CASE SAY THAT THE QUERY IS OUT OF THIS DOMAIN.
+
+"""
 
     try:
         chat = client.chats.create(model="gemini-2.0-flash-exp")
