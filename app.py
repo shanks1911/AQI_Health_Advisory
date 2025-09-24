@@ -208,7 +208,7 @@ REMEMBER: DO NOT ANSWER ANY QUERY THAT IS OUT OF THIS DOMAIN OF AQI AAND ITS REL
 """
 
     try:
-        chat = client.chats.create(model="gemini-2.0-flash-exp")
+        chat = client.chats.create(model="gemini-2.5-flash")
         response = chat.send_message(system_prompt)
         return chat
     except Exception as e:
