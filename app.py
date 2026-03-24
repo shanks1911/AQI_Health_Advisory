@@ -7,7 +7,7 @@ import joblib
 import plotly.graph_objects as go
 import plotly.express as px
 import pytz
-from timezonefinder import TimezoneFinder
+from timezonefinder import TimezoneFinder # type: ignore
 from google import genai
 from dotenv import load_dotenv
 
