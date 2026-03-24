@@ -11,3 +11,15 @@ pytz>=2023.3
 timezonefinder>=6.2.0
 pandas>=2.0.0
 numpy>=1.24.0
+ 
+# ── Added for Issue 2 (model comparison) ─────────────────────────────────────
+xgboost>=2.0.0
+ 
+# ── Added for Issue 4 (residual KDE in evaluation charts) ────────────────────
+scipy>=1.11.0
+ 
+# ── Added for Issue 5 (train_baseline.py — run offline for paper metrics only)
+# Uncomment these before running logic/train_baseline.py
+# statsmodels>=0.14.0
+# torch>=2.0.0
+ 

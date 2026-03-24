@@ -17,7 +17,19 @@ dependencies = [
     "joblib (>=1.5.2,<2.0.0)",
     "matplotlib (>=3.10.6,<4.0.0)",
     "plotly (>=6.3.0,<7.0.0)",
-    "google-genai (>=1.38.0,<2.0.0)"
+    "google-genai (>=1.38.0,<2.0.0)",
+
+    # Added for Issue 2 — XGBoost model comparison
+    "xgboost (>=2.0.0,<3.0.0)",
+
+    # Added for Issue 4 — residual KDE curves in evaluation charts
+    "scipy (>=1.11.0,<2.0.0)",
+
+    # Added for Issue 5 — train_baseline.py (run offline only, not needed for the app)
+    # Uncomment before running logic/train_baseline.py
+    # "statsmodels (>=0.14.0,<0.15.0)",
+    # "torch (>=2.0.0,<3.0.0)",
+    "timezonefinder (>=8.2.1,<9.0.0) ; python_version >= \"3.12\" and python_version < \"4\""
 ]
 
 [tool.poetry]
